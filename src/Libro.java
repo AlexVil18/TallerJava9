@@ -18,14 +18,13 @@ public class Libro {
     }
     
 
-    public boolean prestar() {
+    public void prestar() {
         if (!disponible) {
             System.out.println("El libro no está disponible para préstamo");
-            return false;
+            return;
         }
         disponible = false;
         System.out.println("Libro prestado con éxito");
-        return true;
     }
     
     public void devolver() {
