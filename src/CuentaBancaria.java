@@ -18,28 +18,26 @@ public class CuentaBancaria {
     }
 
 
-    public boolean depositar(double monto) {
+    public void depositar(double monto) {
         if (monto <= 0) {
             System.out.println("Error: El monto a depositar debe ser positivo");
-            return false;
+            return;
         }
         this.saldo += monto;
         System.out.println("Has depositado $" + monto + " en tu cuenta. Tu nuevo saldo es: $" + this.saldo);
-        return true;
     }
 
-    public boolean retirar(double monto) {
+    public void retirar(double monto) {
         if (monto <= 0) {
             System.out.println("Error: El monto a retirar debe ser positivo");
-            return false;
+            return;
         }
         if (monto > this.saldo) {
             System.out.println("Error: Saldo insuficiente. Tu saldo actual es: $" + this.saldo);
-            return false;
+            return;
         }
         this.saldo -= monto;
         System.out.println("Has retirado $" + monto + " de tu cuenta. Tu saldo restante es: $" + this.saldo);
-        return true;
     }
 
 
